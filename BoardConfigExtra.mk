@@ -1,11 +1,5 @@
 # SDCLANG
-SDCLANG_BLACKLIST := bullhead bullhead4c mata
-
-ifneq ($(filter $(SDCLANG_BLACKLIST),$(TARGET_DEVICE)),)
-  TARGET_USE_SDCLANG := false
-else
-  TARGET_USE_SDCLANG := true
-endif
+TARGET_USE_SDCLANG := false
 
 # TWRP
 TW_DEVICE_VERSION ?= $(shell date -u +"%Y%m%d_%H%M")-kfh
