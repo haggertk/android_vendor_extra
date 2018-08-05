@@ -1,3 +1,6 @@
+# Partitions
+TARGET_USES_MKE2FS := true
+
 # SDCLANG
 TARGET_USE_SDCLANG := false
 
