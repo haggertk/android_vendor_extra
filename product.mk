@@ -2,7 +2,8 @@
 GAPPS_EMBED_ARM64_PRODUCT := lineage_mata
 
 ifneq ($(filter $(GAPPS_EMBED_ARM64_PRODUCT),$(TARGET_PRODUCT)),)
-  include vendor/gapps/arm64/arm64-vendor.mk
+    GAPPS_VARIANT := mini
+    $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 endif
 
 # ADB keys
