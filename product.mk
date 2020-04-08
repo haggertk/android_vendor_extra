@@ -1,8 +1,13 @@
 # Gapps
-GAPPS_EMBED_ARM64_PRODUCT := lineage_mata
+GAPPS_EMBED_ARM64_PRODUCT := \
+    lineage_blueline \
+    lineage_mata
 
 ifneq ($(filter $(GAPPS_EMBED_ARM64_PRODUCT),$(TARGET_PRODUCT)),)
     GAPPS_VARIANT := stock
+    GAPPS_FORCE_WEBVIEW_OVERRIDES := false
+    GAPPS_KEEP_ALT_BROWSERS := true
+
     $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 endif
 
