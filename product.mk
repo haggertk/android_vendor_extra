@@ -4,7 +4,7 @@ GAPPS_EMBED_ARM64_PRODUCT := \
     lineage_mata
 
 ifneq ($(filter $(GAPPS_EMBED_ARM64_PRODUCT),$(TARGET_PRODUCT)),)
-    GAPPS_VARIANT := stock
+    GAPPS_VARIANT := full
     GAPPS_FORCE_WEBVIEW_OVERRIDES := false
     GAPPS_KEEP_ALT_BROWSERS := true
 
