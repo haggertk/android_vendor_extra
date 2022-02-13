@@ -1,16 +1,12 @@
 OUR_BUILD=$(subst lineage_,,$(TARGET_PRODUCT))
 
 # Gapps
-GAPPS_EMBED_ARM64_PRODUCT := \
-    lineage_blueline \
-    lineage_mata
+MINDTHEGAPPS_EMBED_ARM64_PRODUCT := \
+    blueline \
+    mata
 
-ifneq ($(filter $(GAPPS_EMBED_ARM64_PRODUCT),$(TARGET_PRODUCT)),)
-    GAPPS_VARIANT := full
-    GAPPS_FORCE_WEBVIEW_OVERRIDES := false
-    GAPPS_KEEP_ALT_BROWSERS := true
-
-    $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+ifneq ($(filter $(MINDTHEGAPPS_EMBED_ARM64_PRODUCT),$(OUR_BUILD)),)
+    $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 endif
 
 # ADB keys
