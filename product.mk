@@ -3,6 +3,8 @@ OUR_BUILD=$(subst lineage_,,$(TARGET_PRODUCT))
 # Gapps
 MINDTHEGAPPS_EMBED_ARM64_PRODUCT := \
     blueline \
+    gta4xl \
+    gta4xlwifi \
     mata
 
 ifneq ($(filter $(MINDTHEGAPPS_EMBED_ARM64_PRODUCT),$(OUR_BUILD)),)
