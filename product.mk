@@ -5,7 +5,8 @@ MINDTHEGAPPS_EMBED_ARM64_PRODUCT := \
     blueline \
     gta4xl \
     gta4xlwifi \
-    mata
+    mata \
+    redfin
 
 ifneq ($(filter $(MINDTHEGAPPS_EMBED_ARM64_PRODUCT),$(OUR_BUILD)),)
     WITH_GMS := true
@@ -26,3 +27,9 @@ else
     PRODUCT_COPY_FILES += \
         vendor/extra/configs/ih8sn/ih8sn_generic.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/ih8sn.conf
 endif
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    root/adb_keys \
+    system/bin/ih8sn \
+    system/etc/ih8sn.conf \
+    system/etc/init/ih8sn.rc
