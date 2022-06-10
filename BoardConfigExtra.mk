@@ -1,6 +1,3 @@
-# SDCLANG
-TARGET_USE_SDCLANG := false
-
 # TWRP
 TW_DEVICE_VERSION ?= $(shell date -u +"%Y%m%d_%H%M")-kfh
 TW_EXCLUDE_SUPERSU := true
